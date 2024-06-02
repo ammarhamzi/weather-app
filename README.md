@@ -2,6 +2,10 @@
 
 This Weather App is a simple web application created using HTML, Bootstrap, and JavaScript. It fetches weather information using the OpenWeather API.
 
+## Live Demo
+
+[Weather App Live Demo](https://ammarhamzi.github.io/weather-app/)
+
 ## Features
 
 - **Current Weather:** Provides real-time weather information for a specified location.
@@ -22,10 +26,6 @@ This Weather App is a simple web application created using HTML, Bootstrap, and 
 ## API
 
 This app utilizes the OpenWeather API to retrieve weather data.
-
-## Live Demo
-
-[Weather App Live Demo](https://ammarhamzi.github.io/weather-app/)
 
 ## Credits
 
