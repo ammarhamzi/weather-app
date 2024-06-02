@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="weather-app p-4 rounded shadow">
+        <button id="toggle-mode-btn" class="btn btn-primary btn-sm">
+          Toggle Mode
+        </button>
+        <h1 class="mb-4">Weather App</h1>
+        <div class="search input-group mb-3">
+          <input
+            type="text"
+            id="city-input"
+            class="form-control"
+            placeholder="Enter city name"
+          />
+          <div class="input-group-append">
+            <button id="search-btn" class="btn btn-primary">Search</button>
+          </div>
+        </div>
+        <div class="error-message text-danger mb-3" id="error-message"></div>
+        <div class="location mb-3">
+          <h2 id="city">City, Country</h2>
+          <div id="time"></div>
+        </div>
+        <div class="current-weather mb-3">
+          <img id="weather-icon" src="" alt="Weather Icon" class="mb-2" />
+          <p id="temperature" class="mb-2">Temperature: --°C</p>
+          <p id="condition">Condition: --</p>
+        </div>
+        <div class="forecast"></div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
