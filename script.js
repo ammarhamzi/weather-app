@@ -3,8 +3,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const defaultCity = "Sarawak, Malaysia";
 
   fetchWeatherData(defaultCity);
-  updateTime();
-  setInterval(updateTime, 1000);
+
+  updateDateTime();
+  setInterval(updateDateTime, 1000);
 
   const toggleModeBtn = document.getElementById("toggle-mode-btn");
   toggleModeBtn.addEventListener("click", () => {
@@ -84,14 +85,18 @@ document.addEventListener("DOMContentLoaded", () => {
     toggleModeBtn.textContent = isNightMode ? "Light Mode" : "Night Mode";
   }
 
-  function updateTime() {
-    const timeElement = document.getElementById("time");
-    const currentTime = new Date();
-    const hours = currentTime.getHours().toString().padStart(2, "0");
-    const minutes = currentTime.getMinutes().toString().padStart(2, "0");
-    const seconds = currentTime.getSeconds().toString().padStart(2, "0");
-    const timeString = `${hours}:${minutes}:${seconds}`;
-    timeElement.textContent = `Current Time: ${timeString}`;
+  function updateDateTime() {
+    const dateTimeElement = document.getElementById("date-time");
+    const currentDateTime = new Date();
+    const options = {
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    };
+    const dateString = currentDateTime.toLocaleDateString("en-US", options);
+    const timeString = currentDateTime.toLocaleTimeString("en-US");
+    dateTimeElement.textContent = `Date: ${dateString}  || Time: ${timeString}`;
   }
 
   updateToggleButtonText();
